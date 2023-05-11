@@ -16,6 +16,7 @@ class LevelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +27,15 @@ class LevelsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "LevelsViewControllerCell", for: indexPath) as! LevelsViewControllerCell
         cell.levelImage.image = UIImage(named: "levelImage1")
         self.tableView.rowHeight = 150.0
+        cell.levelView.layer.cornerRadius = 10
+        self.tableView.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+             print("test tap cell")
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "CardsViewController") as! CardsViewController
+        self.navigationController?.pushViewController(secondViewController, animated: false)
     }
 }
 
