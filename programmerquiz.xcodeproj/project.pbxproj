@@ -43,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		725342372A0E47330071FC89 /* CardsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D25F1C182A06C8DD006D3C94 /* CardsViewController.swift */,
+			);
+			path = CardsViewController;
+			sourceTree = "<group>";
+		};
 		8481C4272A066F5E00BC45C5 = {
 			isa = PBXGroup;
 			children = (
@@ -66,8 +74,8 @@
 				8481C4332A066F5E00BC45C5 /* AppDelegate.swift */,
 				8481C4352A066F5E00BC45C5 /* SceneDelegate.swift */,
 				8481C4372A066F5E00BC45C5 /* LevelsViewController.swift */,
-				D25F1C182A06C8DD006D3C94 /* CardsViewController.swift */,
 				D25F1C1A2A06C950006D3C94 /* StatisticsViewController.swift */,
+				725342372A0E47330071FC89 /* CardsViewController */,
 				8481C4392A066F5E00BC45C5 /* Main.storyboard */,
 				8481C43C2A066F6000BC45C5 /* Assets.xcassets */,
 				8481C43E2A066F6000BC45C5 /* LaunchScreen.storyboard */,
