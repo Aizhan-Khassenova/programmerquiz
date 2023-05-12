@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,14 +86,14 @@
                     <navigationItem key="navigationItem" id="Z9B-7d-YaM"/>
                     <connections>
                         <outlet property="tableView" destination="Lui-EN-rqc" id="pfD-CI-Wdu"/>
-                        <segue destination="46U-to-jpe" kind="presentation" modalPresentationStyle="fullScreen" id="7K6-N6-34s"/>
+                        <segue destination="46U-to-jpe" kind="show" id="Xvx-B2-uDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-771.01449275362324" y="654.91071428571422"/>
         </scene>
-        <!--Item 2-->
+        <!--Cards-->
         <scene sceneID="a7u-Yt-x1E">
             <objects>
                 <viewController storyboardIdentifier="CardsViewController" id="46U-to-jpe" customClass="CardsViewController" customModule="programmerquiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pgi-CU-0sV">
-                                <rect key="frame" x="102" y="50" width="210" height="30"/>
+                                <rect key="frame" x="102" y="119" width="210" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="rkr-Zv-3Pb">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -140,16 +141,79 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-ZA-pt6">
+                                <rect key="frame" x="42" y="176" width="330" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Jjq-R0-kKm">
+                                    <size key="itemSize" width="330" height="500"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hOM-vf-mXp" customClass="CardsCollectionViewCell" customModule="programmerquiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="500"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nBD-NP-Bc1">
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="500"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-n2-OeD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="500"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="BvM-n2-OeD" secondAttribute="bottom" id="22k-4c-6SJ"/>
+                                                <constraint firstItem="BvM-n2-OeD" firstAttribute="leading" secondItem="nBD-NP-Bc1" secondAttribute="leading" id="Yh2-Hx-ufX"/>
+                                                <constraint firstAttribute="trailing" secondItem="BvM-n2-OeD" secondAttribute="trailing" id="fo8-CD-5sc"/>
+                                                <constraint firstItem="BvM-n2-OeD" firstAttribute="top" secondItem="nBD-NP-Bc1" secondAttribute="top" id="o9n-b3-98m"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="330" height="500"/>
+                                        <connections>
+                                            <outlet property="cardsImage" destination="BvM-n2-OeD" id="HGc-c8-p8a"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWd-go-vol">
+                                <rect key="frame" x="268" y="756.5" width="100" height="34.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="k2K-oT-Fgj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Знаю"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0Y-38-Lrz">
+                                <rect key="frame" x="46" y="756.5" width="100" height="34.5"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ce4-Z0-Rmz"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Не знаю"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JwA-Eu-9Xa"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JwA-Eu-9Xa" firstAttribute="bottom" secondItem="CWd-go-vol" secondAttribute="bottom" constant="22" id="DD2-pc-IAw"/>
+                            <constraint firstItem="JwA-Eu-9Xa" firstAttribute="trailing" secondItem="CWd-go-vol" secondAttribute="trailing" constant="46" id="O0x-YZ-uAL"/>
+                            <constraint firstItem="T0Y-38-Lrz" firstAttribute="leading" secondItem="JwA-Eu-9Xa" secondAttribute="leading" constant="46" id="fF1-A8-pYs"/>
                             <constraint firstItem="pgi-CU-0sV" firstAttribute="centerX" secondItem="GkD-t3-Vq5" secondAttribute="centerX" id="nbp-jL-4XE"/>
-                            <constraint firstItem="pgi-CU-0sV" firstAttribute="top" secondItem="JwA-Eu-9Xa" secondAttribute="top" constant="50" id="sAe-Ai-Acv"/>
+                            <constraint firstItem="pgi-CU-0sV" firstAttribute="top" secondItem="JwA-Eu-9Xa" secondAttribute="top" constant="27" id="xWn-1m-HK1"/>
+                            <constraint firstItem="JwA-Eu-9Xa" firstAttribute="bottom" secondItem="T0Y-38-Lrz" secondAttribute="bottom" constant="22" id="yFv-h9-EdF"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="0aN-K7-KbK"/>
-                    <navigationItem key="navigationItem" id="aBy-qb-OSc"/>
+                    <navigationItem key="navigationItem" title="Cards" id="aBy-qb-OSc"/>
+                    <connections>
+                        <outlet property="cardCollectionView" destination="Zzv-ZA-pt6" id="2Sc-iz-S1I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bV9-BG-O6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,8 +294,15 @@
     </scenes>
     <resources>
         <image name="checked" width="256" height="256"/>
+        <image name="pic1" width="722" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

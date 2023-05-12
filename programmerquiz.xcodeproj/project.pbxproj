@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725342392A0E509C0071FC89 /* CardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725342382A0E509C0071FC89 /* CardsCollectionViewCell.swift */; };
 		8481C4342A066F5E00BC45C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481C4332A066F5E00BC45C5 /* AppDelegate.swift */; };
 		8481C4362A066F5E00BC45C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481C4352A066F5E00BC45C5 /* SceneDelegate.swift */; };
 		8481C4382A066F5E00BC45C5 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481C4372A066F5E00BC45C5 /* LevelsViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		725342382A0E509C0071FC89 /* CardsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8481C4302A066F5E00BC45C5 /* programmerquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = programmerquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8481C4332A066F5E00BC45C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8481C4352A066F5E00BC45C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				D25F1C182A06C8DD006D3C94 /* CardsViewController.swift */,
+				725342382A0E509C0071FC89 /* CardsCollectionViewCell.swift */,
 			);
 			path = CardsViewController;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				8481C4342A066F5E00BC45C5 /* AppDelegate.swift in Sources */,
 				8481C4362A066F5E00BC45C5 /* SceneDelegate.swift in Sources */,
 				D25F1C192A06C8DD006D3C94 /* CardsViewController.swift in Sources */,
+				725342392A0E509C0071FC89 /* CardsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
