@@ -141,11 +141,10 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-ZA-pt6">
-                                <rect key="frame" x="42" y="176" width="330" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-ZA-pt6">
+                                <rect key="frame" x="0.0" y="159" width="414" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Jjq-R0-kKm">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="Jjq-R0-kKm">
                                     <size key="itemSize" width="330" height="500"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -153,7 +152,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="hOM-vf-mXp" customClass="CardsCollectionViewCell" customModule="programmerquiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="500"/>
+                                        <rect key="frame" x="0.0" y="44" width="330" height="500"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nBD-NP-Bc1">
                                             <rect key="frame" x="0.0" y="0.0" width="330" height="500"/>
@@ -201,9 +200,13 @@
                         <viewLayoutGuide key="safeArea" id="JwA-Eu-9Xa"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Zzv-ZA-pt6" firstAttribute="top" secondItem="pgi-CU-0sV" secondAttribute="bottom" constant="10" id="CYo-iz-OB4"/>
                             <constraint firstItem="JwA-Eu-9Xa" firstAttribute="bottom" secondItem="CWd-go-vol" secondAttribute="bottom" constant="22" id="DD2-pc-IAw"/>
                             <constraint firstItem="JwA-Eu-9Xa" firstAttribute="trailing" secondItem="CWd-go-vol" secondAttribute="trailing" constant="46" id="O0x-YZ-uAL"/>
+                            <constraint firstItem="CWd-go-vol" firstAttribute="top" secondItem="Zzv-ZA-pt6" secondAttribute="bottom" constant="10" id="QBn-vS-uTO"/>
+                            <constraint firstItem="JwA-Eu-9Xa" firstAttribute="trailing" secondItem="Zzv-ZA-pt6" secondAttribute="trailing" id="V9v-JX-arN"/>
                             <constraint firstItem="T0Y-38-Lrz" firstAttribute="leading" secondItem="JwA-Eu-9Xa" secondAttribute="leading" constant="46" id="fF1-A8-pYs"/>
+                            <constraint firstItem="Zzv-ZA-pt6" firstAttribute="leading" secondItem="JwA-Eu-9Xa" secondAttribute="leading" id="meH-zZ-FBA"/>
                             <constraint firstItem="pgi-CU-0sV" firstAttribute="centerX" secondItem="GkD-t3-Vq5" secondAttribute="centerX" id="nbp-jL-4XE"/>
                             <constraint firstItem="pgi-CU-0sV" firstAttribute="top" secondItem="JwA-Eu-9Xa" secondAttribute="top" constant="27" id="xWn-1m-HK1"/>
                             <constraint firstItem="JwA-Eu-9Xa" firstAttribute="bottom" secondItem="T0Y-38-Lrz" secondAttribute="bottom" constant="22" id="yFv-h9-EdF"/>
